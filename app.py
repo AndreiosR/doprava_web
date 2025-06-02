@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+import os
 import googlemaps
 import csv
 import json
@@ -6,7 +7,7 @@ from datetime import datetime, timedelta
 
 app = Flask(__name__)
 
-gmaps = googlemaps.Client(key='AIzaSyAcxJwHi7EByPf1EqnzO6jgxtziZg9qQ8A')  # 🔐 Sem vlož svůj vlastní klíč
+gmaps = googlemaps.Client(key=os.environ.get('AIzaSyAcxJwHi7EByPf1EqnzO6jgxtziZg9qQ8A'))  # 🔐 Sem vlož svůj vlastní klíč
 
 def nacti_mapovani(cesta):
     mapovani = {}
