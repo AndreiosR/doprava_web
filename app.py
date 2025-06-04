@@ -7,7 +7,14 @@ from datetime import datetime, timedelta
 
 app = Flask(__name__)
 
-gmaps = googlemaps.Client(key=os.environ.get('AIzaSyAcxJwHi7EByPf1EqnzO6jgxtziZg9qQ8A'))  # 🔐 Sem vlož svůj vlastní klíč
+#vloženo při poslední úpravě
+API_KEY = os.environ.get("GOOGLE_API_KEY")
+if not API_KEY:
+    raise RuntimeError("❌ GOOGLE_API_KEY není nastaven!")
+
+gmaps = googlemaps.Client(key=API_KEY)
+
+#konec vkladu poslední úpravy
 
 def nacti_mapovani(cesta):
     mapovani = {}
