@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Dopravní aplikace</title>
+    <link rel="stylesheet" href="grafic.css">
 </head>
-<body>
-    <h2>Rychlá a kapacitní doprava</h2>
-    <label>Odkud:</label>
-    <input type="text" id="origin"><br><br>
-    <label>Kam:</label>
-    <input type="text" id="destination"><br><br>
+<body div id="telo">
+    <h2 div id="nadpis">Rychlá a kapacitní doprava</h2>
+    <img id="logo" src="images/logo_velke.jpg">
+    <label div id="odkud" style="position:absolute;top:200px;left:250px;">Odkud:</label>
+    <input div type="text" id="origin" style="position:absolute;top:200px;left:300px;"><br><br>
+    <label div id="odkud" style="position:absolute;top:230px;left:262px;">Kam:</label>
+    <input type="text" id="destination" style="position:absolute;top:230px;left:300px;"><br><br>
     <button onclick="spocitatCestu()">Spočítat cestu</button>
     <pre id="vystup">Zde se zobrazí výstup...</pre>
 
